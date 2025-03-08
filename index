@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>会员话题活动社区</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .topic-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .topic-title {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .topic-content {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .topic-image {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        .comment-section {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .comment-input {
+            width: 100%;
+            height: 100px;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            resize: none;
+        }
+
+        .submit-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+
+        .my-comments {
+            margin-top: 20px;
+        }
+
+        .comment-card {
+            background-color: white;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border-left: 4px solid #4CAF50;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-size: 12px;
+            margin-left: 10px;
+        }
+
+        .pending {
+            background-color: #ffd700;
+            color: #000;
+        }
+
+        .winner {
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="topic-card">
+        <h1 class="topic-title">春节话题活动：晒出你的年夜饭</h1>
+        <img src="festival-meal.jpg" alt="活动示例图片" class="topic-image">
+        <div class="topic-content">
+            <p>亲爱的会员们：</p>
+            <p>春节将至，邀请大家分享自己的年夜饭照片和心得！</p>
+            <p>活动时间：2024年2月1日-2024年2月15日</p>
+            <p>奖励内容：</p>
+            <ul>
+                <li>一等奖（1名）：888元购物券</li>
+                <li>二等奖（3名）：388元购物券</li>
+                <li>三等奖（5名）：188元购物券</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="comment-section">
+        <h3>发表你的年夜饭故事</h3>
+        <textarea class="comment-input" placeholder="分享你的年夜饭照片和故事..."></textarea>
+        <input type="file" accept="image/*" style="margin-bottom: 10px;">
+        <button class="submit-btn">提交参与</button>
+    </div>
+
+    <div class="my-comments">
+        <h3>我的参与记录</h3>
+        <div class="comment-card">
+            <p>我家今年的年夜饭有18道菜，特别丰盛！最喜欢妈妈做的红烧鱼...</p>
+            <small>提交时间：2024-02-01 18:30</small>
+            <span class="status-badge pending">审核中</span>
+        </div>
+        <div class="comment-card">
+            <p>分享一道我家的传统年菜：糖醋排骨，祖传三代的配方...</p>
+            <small>提交时间：2024-02-02 19:15</small>
+            <span class="status-badge winner">获奖：二等奖</span>
+        </div>
+    </div>
+
+    <script>
+        // 这里可以添加交互逻辑
+        document.querySelector('.submit-btn').addEventListener('click', function() {
+            alert('参与成功！请等待审核。');
+        });
+    </script>
+</body>
+</html>
